@@ -1,0 +1,24 @@
+{
+  "name": "headless-chrome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wait-for-port chrome 9515 && nightwatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewshawcare/headless-chrome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewshawcare/headless-chrome/issues"
+  },
+  "homepage": "https://github.com/andrewshawcare/headless-chrome#readme",
+  "dependencies": {
+    "nightwatch": "^0.9.15",
+    "wait-for-port": "0.0.2"
+  }
+}

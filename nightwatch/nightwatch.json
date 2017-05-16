@@ -1,0 +1,20 @@
+{
+  "src_folders": ["tests"],
+  "output_folder": "reports",
+  "selenium": {
+    "start_process": false
+  },
+  "test_settings": {
+    "default": {
+      "selenium_port": 9515,
+      "selenium_host": "chrome",
+      "default_path_prefix": "",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "debuggerAddress": "chrome:9222"
+        }
+      }
+    }
+  }
+}
