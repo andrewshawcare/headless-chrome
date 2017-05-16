@@ -1,0 +1,8 @@
+version: '3'
+services:
+  chrome:
+    build: .
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - '9222:9222'
