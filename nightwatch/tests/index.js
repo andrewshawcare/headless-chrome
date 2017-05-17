@@ -1,14 +1,13 @@
 module.exports = {
-  tags: ['git'],
-  'Demo test GitHub' : function (client) {
+  'Galaxy S8': (client) => {
     client
-      .url('https://github.com/nightwatchjs/nightwatch')
-      .waitForElementVisible('body', 1000)
-      .assert.visible('.container h1 strong a')
-      .assert.containsText('.container h1 strong a', 'nightwatch', 'Checking project title is set to nightwatch');
+      .url('https://www.telus.com/en/on/mobility/phones')
+      .waitForElementVisible('#samsung-galaxy-s8_link', 1000)
+      .click('#samsung-galaxy-s8_link')
+      .waitForElementVisible('.device-config__name', 1000)
+      .assert.containsText(".device-config__name", "Galaxy S8");
   },
-
-  after : function(client) {
+  after: (client) => {
     client.end();
   }
 };
