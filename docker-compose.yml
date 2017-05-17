@@ -2,8 +2,6 @@ version: '3'
 services:
   chrome:
     build: ./chrome
-    cap_add:
-      - SYS_ADMIN
     ports:
       - '9222:9222'
   nightwatch:
