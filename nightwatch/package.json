@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wait-for-port chrome 9515 && nightwatch"
+    "test": "wait-for-port chrome 9515 && nightwatch",
+    "test-nodemon": "wait-for-port chrome 9515 && nodemon --watch tests --exec 'nightwatch'"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/andrewshawcare/headless-chrome#readme",
   "dependencies": {
     "nightwatch": "^0.9.15",
+    "nodemon": "^1.11.0",
     "wait-for-port": "0.0.2"
   }
 }

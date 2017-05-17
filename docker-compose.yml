@@ -10,3 +10,6 @@ services:
     build: ./nightwatch
     links:
       - chrome
+    volumes:
+      - './nightwatch/tests:/tests'
+    command: run test-nodemon

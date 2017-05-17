@@ -1,15 +1,14 @@
 module.exports = {
-  'Demo test Google': function (client) {
+  tags: ['git'],
+  'Demo test GitHub' : function (client) {
     client
-      .url('http://www.google.com')
+      .url('https://github.com/nightwatchjs/nightwatch')
       .waitForElementVisible('body', 1000)
-      .assert.title('Google')
-      .assert.visible('input[type=text]')
-      .setValue('input[type=text]', 'rembrandt van rijn')
-      .waitForElementVisible('button[name=btnK]', 1000)
-      .click('button[name=btnG]')
-      .pause(1000)
-      .assert.containsText('ol#rso li:first-child', 'Rembrandt - Wikipedia')
-      .end();
+      .assert.visible('.container h1 strong a')
+      .assert.containsText('.container h1 strong a', 'nightwatch', 'Checking project title is set to nightwatch');
+  },
+
+  after : function(client) {
+    client.end();
   }
 };
