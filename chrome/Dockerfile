@@ -21,6 +21,10 @@ RUN curl -O https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/
   ./chromedriver_linux64.zip && \
   chmod +x /usr/local/bin/chromedriver
 
+# Install xvfb
+RUN apt-get update && \
+  apt-get install -y xvfb
+
 COPY entrypoint.sh .
 RUN chmod +x ./entrypoint.sh
 
