@@ -9,7 +9,7 @@ COPY package.json .
 RUN npm install
 
 COPY wdio.conf.js .
-COPY specs.js .
+COPY specs ./specs
 
 ENTRYPOINT ["npm"]
 CMD ["start"]

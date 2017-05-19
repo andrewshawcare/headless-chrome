@@ -2,7 +2,7 @@ exports.config = {
   host: "chrome",
   port: 9515,
   path: "/",
-  specs: ["specs.js"],
+  specs: ["specs/*.js"],
   capabilities: [
     {
       browserName: "chrome",

@@ -8,7 +8,13 @@ services:
     build: ./nightwatch
     links:
       - chrome
+    volumes:
+      - './nightwatch/tests:/usr/src/app/tests'
+    command: run develop
   webdriverio:
     build: ./webdriverio
     links:
       - chrome
+    volumes:
+      - './webdriverio/specs:/usr/src/app/specs'
+    command: run develop

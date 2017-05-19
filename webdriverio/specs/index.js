@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 const { browser } = global;
 
 describe('DuckDuckGo search', function() {
@@ -9,5 +11,8 @@ describe('DuckDuckGo search', function() {
 
         const searchButtonElement = browser.element('#search_button_homepage');
         searchButtonElement.click();
+
+        const firstResultTitleElement = browser.element('#r1-0');
+        assert.ok(firstResultTitleElement.getText().includes('WebdriverIO'));
     });
 });

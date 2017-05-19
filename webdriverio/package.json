@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "wait-for-port chrome 9222 && wdio",
-    "develop": "nodemon --watch . --exec 'npm start'"
+    "develop": "nodemon --watch specs --exec 'npm start'"
   },
   "keywords": [],
   "author": "",
