@@ -1,0 +1,17 @@
+{
+  "name": "webdriverio",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "wait-for-port chrome 9222 && wdio",
+    "develop": "nodemon --watch . --exec 'npm start'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webdriverio": "4.8.0",
+    "wdio-mocha-framework": "0.5.10",
+    "nodemon": "1.11.0",
+    "wait-for-port": "0.0.2"
+  }
+}

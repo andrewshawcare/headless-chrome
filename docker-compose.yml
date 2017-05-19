@@ -6,8 +6,8 @@ services:
       - '9222:9222'
   nightwatch:
     build: ./nightwatch
+    links: chrome
+  webdriverio:
+    build: ./webdriverio
     links:
       - chrome
-    volumes:
-      - './nightwatch/tests:/tests'
-    command: run test-nodemon
