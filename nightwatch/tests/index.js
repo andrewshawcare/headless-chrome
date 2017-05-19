@@ -1,11 +1,11 @@
 module.exports = {
-  'Galaxy S8': (client) => {
+  'DuckDuckGo search': (client) => {
     client
-      .url('https://www.telus.com/en/on/mobility/phones')
-      .waitForElementVisible('#samsung-galaxy-s8_link', 1000)
-      .click('#samsung-galaxy-s8_link')
-      .waitForElementVisible('.device-config__name', 1000)
-      .assert.containsText(".device-config__name", "Galaxy S8");
+      .url('https://duckduckgo.com/')
+      .waitForElementVisible('#search_form_input_homepage', 1000)
+      .setValue('#search_form_input_homepage', 'WebdriverIO')
+      .waitForElementVisible('#search_button_homepage', 1000)
+      .click('#search_button_homepage');
   },
   after: (client) => {
     client.end();
