@@ -2,7 +2,7 @@
   "name": "webdriverio",
   "version": "1.0.0",
   "scripts": {
-    "start": "wait-for-port chrome 9222 && wdio",
+    "start": "wdio",
     "develop": "nodemon --watch specs --exec 'npm start'"
   },
   "keywords": [],

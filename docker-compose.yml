@@ -4,13 +4,6 @@ services:
     build: ./chrome
     ports:
       - '9222:9222'
-  nightwatch:
-    build: ./nightwatch
-    links:
-      - chrome
-    volumes:
-      - './nightwatch/tests:/usr/src/app/tests'
-    command: run develop
   webdriverio:
     build: ./webdriverio
     links:
